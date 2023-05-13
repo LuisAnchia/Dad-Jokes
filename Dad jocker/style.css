@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(to right, #21c0ff, #ac099e);
+  }
+
+.circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    left: 42%;
+    top: 30%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .image {
+    width: 50%;
+    margin-right: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+  
+  .form input[type="text"] {
+    margin-bottom: 10px;
+  }
+  
+  .distance-button{
+    margin-top: 10%;
+  }
+
+  .id{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5%;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.281);
+    border-radius: 20px;
+    padding: 3% 3%;
+    color: rgb(0, 0, 0);
+
+  }
