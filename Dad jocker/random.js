@@ -1,6 +1,4 @@
-
-
-const randomJoker = "https://icanhazdadjoke.com/";
+ const randomJoker = "https://icanhazdadjoke.com/";
 
 document.getElementById("buttonForJoker").addEventListener("click", Jokerin);
 
@@ -12,3 +10,4 @@ async function Jokerin(){
     .then(data => document.getElementById("joker").innerHTML = data.joke);  
 }
 
+//export default randomJoker;

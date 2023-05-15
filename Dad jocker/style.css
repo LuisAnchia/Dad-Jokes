@@ -3,32 +3,28 @@ body {
   }
 
 .circle {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: red;
     position: absolute;
-    left: 42%;
-    top: 30%;
+    left: 43.7%;
+    top: 16.5%;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    
   }
   
   .image {
-    width: 50%;
+    width: 30%;
     margin-right: 20px;
   }
   
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-  }
+
   
   .form input[type="text"] {
     margin-bottom: 10px;
@@ -47,4 +43,97 @@ body {
     padding: 3% 3%;
     color: rgb(0, 0, 0);
 
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #008080;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    margin: 2rem;
+  }
+  
+  form {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 5%;
+    margin-left: 30%;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-right: 1rem;
+    margin-top: 1.5%;
+    color: white;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #008080;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #006666;
+  }
+
+  button[type="button"] {
+    background-color: #008080;
+    padding: 2% 2%;
+    color: white;
+    font-weight: bold;
+    border: #ac099e;
+  }
+  
+  button[type="button"]:hover {
+    background-color: white;
+    color:black;
+  }
+  
+  #results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .joke {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .joke img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
   }

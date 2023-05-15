@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!--<div class="circle"></div> quitar comentario si quieres que inicie con nariz de payaso-->
-    <div class="container">
-      <img
+    <!--<div class="circle"></div> Aqui le podemos poner nariz de payaso al estimado-->
+      <div class="container">
+        <img
         class="image"
         src="img/dad.png.png"
         alt="Imagen de chiste"
@@ -16,10 +16,20 @@
       <div>
         <button type="button" id="buttonForJoker">Random Joke</button>
         <div class="id" id="joker"></div>
-        <button class="distance-button" type="button" id="search-button">Buscar</button>
 
-        <script src="chistesRandom.js"></script>
-      </div>   
+        <script src="random.js"></script>
+
+      </div> 
+      </div>
+      <form>
+        <label for="search-input">Search Joke:</label>
+        <input type="text" id="inputBySearch" name="search-input" />
+        <button type="submit">Search</button>
+      </form>
+      <div id="results"></div>
+      </main>
+  
+      <script src="search.js"></script>
   </body>
 
 </html>
