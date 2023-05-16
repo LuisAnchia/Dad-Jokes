@@ -2,8 +2,8 @@ const form = document.querySelector('form');
 const input = document.querySelector('#inputBySearch');
 const results = document.querySelector('#results');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+export  async function search (e) {
+e.preventDefault();
   const searchTerm = input.value; 
   const url = `https://icanhazdadjoke.com/search?term=${searchTerm}`;
   try {
@@ -28,4 +28,6 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     results.innerHTML = '<p>There was a problem looking for jokes. Try again.</p>';
   }
-});
+};
+
+form.addEventListener('submit', search)
