@@ -9,3 +9,4 @@ export async function Jokerin(){
     .then((resp) => resp.json())
     .then(data => document.getElementById("joker").innerHTML = data.joke);  
 }
+
