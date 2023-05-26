@@ -1,16 +1,3 @@
-body {
-    background: linear-gradient(to right, #21c0ff, #ac7809);
-  }
-
-.circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: red;
-    position: absolute;
-    left: 43.7%;
-    top: 16.5%;
-}
 
 .container {
     display: flex;
@@ -36,12 +23,13 @@ body {
 
   .id{
     font-family: 'Courier New', Courier, monospace;
-    margin-top: 5%;
+    margin-bottom: 4%;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.281);
-    border-radius: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
     padding: 3% 3%;
     color: rgb(0, 0, 0);
+    
 
   }
   * {
@@ -63,6 +51,12 @@ body {
   }
   
   h1 {
+    font-size: 2rem;
+  }
+
+  p{
+    margin-top: 5%;
+    font-weight: bold;
     font-size: 2rem;
   }
   
@@ -108,17 +102,15 @@ body {
   }
 
   button[type="button"] {
-    background-color: #008080;
+    background-color: #ffffff;
     padding: 2% 2%;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    border: #ac099e;
+  
   }
   
   button[type="button"]:hover {
-    background-color: white;
-    color:black;
-   
+    background-color: rgba(128, 128, 128, 0.096);
   }
   
   #results {
@@ -128,7 +120,7 @@ body {
   }
   
   .joke {
-    background-color: #fffffff1;
+    background-color: #86858554;
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
@@ -140,3 +132,71 @@ body {
     margin-bottom: 1rem;
     
   }
+
+  .display-principal{
+    display: flex;
+    gap: 4%;
+    margin-top: 5%;
+    padding-left: 17%;
+    padding-right: 17%;
+
+  }
+  
+ .display-second{
+  display: flex;
+  gap: 8%;
+  margin-top: 8%;
+  padding-left: 17%;
+  padding-right: 17%;
+
+ }
+
+ .background-color{
+  background-color: rgba(128, 128, 128, 0.404);
+  padding: 3% 3% 3% 3%;
+  margin-top: 20%;
+
+ }
+
+ .background-color-form{
+  background-color: rgba(128, 128, 128, 0.404);
+  padding: 3% 3% 3% 3%;
+  
+
+ }
+
+ .choose-product{
+  font-size: 1rem;
+  padding-left: 17%;
+  position: absolute;
+  padding-top: 1%;
+ }
+
+ .button-container {
+  display: flex;
+  padding-left: 36%;
+  margin-top: 5%;
+}
+
+.round-button {
+  border-radius: 50%;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.round-button.white {
+  background-color: #FFFFFF;
+  color: black;
+  border: 2px solid black;
+}
+
+.round-button.black {
+  background-color: #000000;
+}
