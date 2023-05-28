@@ -11,16 +11,17 @@
 <body>
 
     <div class="display-principal">
-        <div><img class="img-principal" src="img/product-shirt-black.jpg" height="300px" alt="t-shirts blacks">
+        <div>
+            <img id="image" class="img-principal" src="img/product-shirt-black.jpg" height="300px" alt="t-shirts blacks">
             <div class="button-container">
-                <button class="round-button black"></button>
-                <button class="round-button white"></button>
+                <button type="button" id="blackButton" class="round-button black"></button>
+                <button type="button" id="whiteButton" class="round-button white"></button>
             </div>
         </div>
 
         <div>
             <h1>Black Shirt whith joke</h1>
-            <p>$25</p>
+            <span>$25</span>
             <div class="background-color">
                 <div class="id" id="joker"></div>
                 <button type="button" id="buttonForJoker">Get another Joke!e</button>
@@ -30,15 +31,17 @@
 
     <p class="choose-product">Choose another product!</p>
 
-    <div class="display-second">
+    <footer id="footer" class="display-second">
         
-        <div class="first-img"><img src="img/product-pillow-white.jpg" height="200px" alt="pillot willet"></div>
-        <div><img src="img/product-poster-white.jpg" height="200px"  alt="poster white"></div>
-        <div> <img src="img/product-case-black.jpg" height="200px" alt="case black"></div>
+        <div><img class="thumbnail" src="img/product-pillow-white.jpg" height="200px" alt="pillot willet"></div>
+        <div><img class="thumbnail" src="img/product-poster-white.jpg" height="200px"  alt="poster white"></div>
+        <div><img class="thumbnail" src="img/product-case-black.jpg" height="200px" alt="case black"></div>
 
-    </div>
+    </footer>
 
+    <!--<script src="./Dad jocker/js/publisher.js" type="module"> </script>-->
     <script src="./Dad jocker/js/app.js" type="module"></script>
+
 
 </body>
 </html>
