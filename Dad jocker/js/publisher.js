@@ -1,5 +1,13 @@
 import { ImageObserver } from './observer.js';
 import { callJoker } from './random.js';
+import { showJoke } from './callRandom.js';
+showJoke();
+
+const jokeText = localStorage.getItem('jokeAbout');
+if (jokeText) {
+showJokeOverlay(jokeText);
+localStorage.removeItem('jokeAbout');
+}
 
 const imageObserver = new ImageObserver();
 
