@@ -1,38 +1,32 @@
-export class ImageObservable {
-    constructor() {
-      this.observers = [];
-    }
-  
-    addObserver(observer) {
-      this.observers.push(observer);
-    }
-  
-    removeObserver(observer) {
-      const index = this.observers.indexOf(observer);
-      if (index !== -1) {
-        this.observers.splice(index, 1);
-      }
-    }
-  
-    notifyObservers(image) {
-      for (const observer of this.observers) {
-        observer.update(image);
-      }
-    }
-  }
-  
-  export class ImageObserver {
-    update(image) {
-      const imageElement = document.getElementById('image');
-      imageElement.src = image;
-    }
-  }
-  
-  const thumbnailImages = document.getElementsByClassName('thumbnail');
-  for (const thumbnailImage of thumbnailImages) {
-    thumbnailImage.addEventListener('click', () => {
-      const newImage = thumbnailImage.src;
-      imageObservable.notifyObservers(newImage);
-    });
-  }
+export class ImageObserver {
+  update(image) {
+    // Lógica de actualización del observador de imagen
+    console.log('Imagen actualizada:', image);
 
+    const imageElement = document.getElementById('image');
+    imageElement.src = image;
+
+    const priceElement = document.querySelector('.display-principal span');
+    let price = 0;
+
+    if (image.includes('product-case-white')) {
+      price = 5;
+    } else if (image.includes('product-case-black')) {
+      price = 7;
+    } else if (image.includes('product-poster-white')) {
+      price = 3;
+    } else if (image.includes('product-poster-black')) {
+      price = 5;
+    } else if (image.includes('product-shirt-white')) {
+      price = 10;
+    } else if (image.includes('product-shirt-black')) {
+      price = 13;
+    } else if (image.includes('product-pillow-white')) {
+      price = 12;
+    } else if (image.includes('product-pillow-black')) {
+      price = 15;
+    }
+
+    priceElement.textContent = '$' + price;
+  }
+}
