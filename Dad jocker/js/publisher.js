@@ -1,15 +1,51 @@
-import { ImageObserver } from './observer.js';
 import { callJoker } from './random.js';
 import { showJoke } from './callRandom.js';
 showJoke();
 
 const jokeText = localStorage.getItem('jokeAbout');
 if (jokeText) {
-showJokeOverlay(jokeText);
+showJokeOverlay(jokeText);s
 localStorage.removeItem('jokeAbout');
 }
 
+import { ImageObserver } from './observer.js';
 const imageObserver = new ImageObserver();
+const imageElement = document.getElementById('image');
+
+const colorMappings = {
+  'product-case': { white: 'black', black: 'white' },
+  'product-poster': { white: 'black', black: 'white' },
+  'product-shirt': { white: 'black', black: 'white' },
+  'product-pillow': { white: 'black', black: 'white' }
+};
+
+const products = {
+  'product-case': {
+    price: { white: 5, black: 7 },
+    title: 'Product Case',
+    colors: ['white', 'black']
+  },
+  'product-poster': {
+    price: { white: 3, black: 5 },
+    title: 'Product Poster',
+    colors: ['white', 'black']
+  },
+  'product-shirt': {
+    price: { white: 10, black: 13 },
+    title: 'Product Shirt',
+    colors: ['white', 'black']
+  },
+  'product-pillow': {
+    price: { white: 12, black: 15 },
+    title: 'Product Pillow',
+    colors: ['white', 'black']
+  }
+};
+
+imageElement.addEventListener('load', () => {
+  const currentImage = imageElement.src;
+  imageObserver.update(currentImage);
+});
 
 const thumbnailImages = document.getElementsByClassName('thumbnail');
 for (const thumbnailImage of thumbnailImages) {
@@ -19,59 +55,16 @@ for (const thumbnailImage of thumbnailImages) {
   });
 }
 
-
-  document.getElementById('blackButton').addEventListener('click', () => {
-    const currentImage = document.getElementById('image').src;
-  
-    if (currentImage.includes('product-pillow-white')) {
-      const newImage = currentImage.replace('product-pillow-white', 'product-pillow-black');
-      imageObserver.update(newImage);
-    }
-
-     else if (currentImage.includes('product-poster-white')) {
-        const newImage = currentImage.replace('product-poster-white', 'product-poster-black');
-        imageObserver.update(newImage);
-      }
-    
-      else if (currentImage.includes('product-case-white')) {
-        const newImage = currentImage.replace('product-case-white', 'product-case-black');
-        imageObserver.update(newImage);
-      }
-      else if (currentImage.includes('product-shirt-white')) {
-        const newImage = currentImage.replace('product-shirt-white', 'product-shirt-black');
-        imageObserver.update(newImage);
-      }
-    
-  
-  
-  imageObserver.update(newImage);
-});
-
-document.getElementById('whiteButton').addEventListener('click', () => {
+const whiteButton = document.getElementById('whiteButton');
+whiteButton.addEventListener('click', () => {
   const currentImage = document.getElementById('image').src;
-  let newImage = '';
-
-  if (currentImage.includes('product-pillow-white')) {
-    const newImage = currentImage.replace('product-pillow-white', 'product-pillow-black');
-    imageObserver.update(newImage);
-  }
-
-  if (currentImage.includes('product-shirt')) {
-    newImage = currentImage.replace('product-shirt-black', 'product-shirt-white');
-  } else if (currentImage.includes('product-poster')) {
-    newImage = currentImage.replace('product-poster-black', 'product-poster-white');
-  } else if (currentImage.includes('product-case')) {
-    newImage = currentImage.replace('product-case-black', 'product-case-white');
-  } else if (currentImage.includes('product-pillow')) {
-    newImage = currentImage.replace('product-pillow-black', 'product-pillow-white');
-  }
-
+  const newImage = currentImage.replace('-black', '-white');
   imageObserver.update(newImage);
 });
 
-const imageElement = document.getElementById('image');
-imageElement.addEventListener('load', () => {
-  const currentImage = imageElement.src;
-  imageObserver.update(currentImage);
+const blackButton = document.getElementById('blackButton');
+blackButton.addEventListener('click', () => {
+  const currentImage = document.getElementById('image').src;
+  const newImage = currentImage.replace('-white', '-black');
+  imageObserver.update(newImage);
 });
-
