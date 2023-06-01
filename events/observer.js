@@ -33,9 +33,7 @@ class Observer {
   update(data) {}
 }
 
-// Importante porque esta linea define mi imagen
-//imagen principal de inicio 
-
+// Define la clase ImageObserver
 const image = 'product-shirt-black.jpg';
 
 // Define la clase ImageObserver
