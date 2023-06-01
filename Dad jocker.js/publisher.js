@@ -1,5 +1,5 @@
-import { callJoker } from '../Dad jocker/js/random.js';
-import { showJoke } from '../Dad jocker/js/callRandom.js';
+import { callJoker } from '../Dad jocker.js/random.js';
+import { showJoke } from '../Dad jocker.js/callRandom.js';
 showJoke();
 
 const jokeText = localStorage.getItem('jokeAbout');
