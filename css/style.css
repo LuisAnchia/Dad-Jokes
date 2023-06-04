@@ -242,3 +242,16 @@ body {
   padding: 20px;
   border-radius: 5px;
 }
+
+.thumbnail{
+  border: 2px solid black;
+}
+
+.img-principal{
+  border: 2px solid black;
+}
+
+.positionRandomSearch{
+  position: absolute;
+  left: 56%;
+}
