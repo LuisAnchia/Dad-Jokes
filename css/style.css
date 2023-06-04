@@ -19,15 +19,20 @@ body {
   
   .image {
     width: 25%;
-    margin-right: 20px;
     position: absolute;
-    top: 0%;
+    top: 9%;
+    display: block;
+    margin: auto;
   }
   
 
   
   .form input[type="text"] {
     margin-bottom: 10px;
+  }
+
+  .FlexSearchForm{
+    display: flex;
   }
   
   .distance-button{
@@ -71,7 +76,13 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    margin-top: 5%;
+    margin-top: 2%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.404);
+    padding: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
     
   }
   
@@ -93,9 +104,9 @@ body {
   button[type="submit"] {
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
-    background-color: #008080;
-    color: #fff;
-    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 2%;
@@ -110,27 +121,34 @@ body {
     padding: 2% 2%;
     color: rgb(0, 0, 0);
     font-weight: bold;
-  
+   
+   
   }
   
-  button[type="button"]:hover {
-    background-color: rgba(128, 128, 128, 0.096);
-  }
+  /*button[type="button"]:hover {
+       background-color: rgb(255 255 255);
+  }*/
   
   #results {
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    align-items: center;
   }
   
   .joke {
-    background-color: #86858554;
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
     margin-right: 20%;
     margin-left: 20%;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 100;
+    list-style: none;
+    width: 105%;
+    
   }
   
   .joke img {

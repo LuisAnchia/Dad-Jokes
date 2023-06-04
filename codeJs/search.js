@@ -12,11 +12,11 @@ export async function search(e) {
     if (data.total_jokes > 0) {
       results.innerHTML = '';
       data.results.forEach((joke) => {
-        const jokeDiv = document.createElement('div');
+        const jokeDiv = document.createElement('Ul');
         jokeDiv.classList.add('joke');
         const img = document.createElement('img');
         //img.src = `https://icanhazdadjoke.com/j/R7UfaahVfFd.png${joke.id}.png`;
-        const text = document.createElement('p');
+        const text = document.createElement('li');
         text.textContent = joke.joke;
         jokeDiv.appendChild(img);
         jokeDiv.appendChild(text);

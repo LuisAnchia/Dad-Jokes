@@ -6,13 +6,12 @@
   </head>
   <body>
     
-    <div class="container">
-        <img
-        class="image"
-        src="img/dad.png.png"
-        alt="Imagen de chiste"
-      />
-        
+    <div class="container">     
+      <img
+      class="image"
+      src="img/dad.png.png"
+      alt="Imagen de chiste"
+    />   
       <div class="background-color">
         <div class="id" id="joker"></div>
         <button type="button" id="buttonForJoker">Get another Joke!</button>
@@ -20,12 +19,15 @@
     </div>
 
       <form>
-        <label for="search-input">Search Joke:</label>
-        <input type="text" id="inputBySearch" name="search-input" />
-        <button type="submit">Search</button>
+        <div class="FlexSearchForm">
+          <input type="text" id="inputBySearch" name="search-input" />
+          <button type="submit">Search</button>
+        </div>
+        <div>
+          <span id="results"></span>
+        </div>      
       </form>
-      <div id="results"></div>
-      </main>
+      
   
       <script src="./codeJs/app.js" type="module"></script>
   </body>
