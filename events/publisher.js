@@ -1,4 +1,6 @@
 import { callJoker } from '../codeJs/random.js';
+import { addEventListeners } from '../codeJs/cart/carts.js';
+addEventListeners();
 import { showJoke } from '../codeJs/callRandom.js';
 showJoke();
 
