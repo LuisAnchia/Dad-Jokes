@@ -5,7 +5,18 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="displayCart"><img class="cartDesing" src="img/svg/shopping-cart.png" alt="cart"></div>
+   <div class="displayCart">
+      <div id="carrito" class="displayCart">
+        <img class="cartDesing" id="ver-carrito-btn" src="img/svg/shopping-cart.png" alt="cart">
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+                <h3>Productos en el carrito</h3>
+                <ul id="carrito-list"></ul>
+            </div>
+          </div>
+       </div>
+   </div>
     <div class="container">     
       <img
       class="image"
