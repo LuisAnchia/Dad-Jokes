@@ -179,7 +179,7 @@ body {
  .background-color{
   background-color: rgba(128, 128, 128, 0.404);
   padding: 3% 3% 3% 3%;
-  margin-top: 21%;
+  margin-top: 27%;
 
  }
 
@@ -241,6 +241,7 @@ body {
 .joke-container {
   padding: 20px;
   border-radius: 5px;
+  margin-top: 12%;
 }
 
 .thumbnail{
@@ -264,9 +265,24 @@ body {
 }
 
 .cartDesing{
-  background-color: #1b8584;
+  background-color: #0bb9b9;
   padding: 1%;
   width: 5%;
   border-radius: 15px;
+
+}
+
+
+.addButonCart{
+  background-color: #0bb9b9;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 4%;
+  margin-right: 63%;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
 
 }
