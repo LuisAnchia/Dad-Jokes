@@ -19,6 +19,33 @@ export function addEventListeners() {
     });
   }
 
+  const eliminarTodoBtn = document.getElementById("eliminarTodoBtn");
+
+eliminarTodoBtn.addEventListener("click", function() {
+  carrito = [];
+  actualizarLista();
+});
+
+const eliminarUnoBtn = document.getElementById("eliminarUnoBtn");
+
+eliminarUnoBtn.addEventListener("click", function() {
+  carrito.pop();
+  actualizarLista();
+});
+
+function actualizarLista() {
+  carritoList.innerHTML = '';
+  if (carrito.length === 0) {
+    carritoList.innerHTML = 'No hay productos pendientes.';
+  } else {
+    for (let j = 0; j < carrito.length; j++) {
+      let producto = carrito[j];
+      let li = producto.mostrarProducto();
+      carritoList.appendChild(li);
+    }
+  }
+}
+
   verCarritoBtn.addEventListener('click', function() {
     carritoList.innerHTML = '';
     if (carrito.length === 0) {
@@ -43,3 +70,4 @@ export function addEventListeners() {
     }
   });
 }
+

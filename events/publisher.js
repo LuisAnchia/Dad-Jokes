@@ -1,4 +1,14 @@
-import { callJoker } from '../codeJs/random.js';
+/**import { callJoker } from '../codeJs/random.js';**/
+import { displayJoke } from '../codeJs/api/domRandom.js';
+
+// Llamar a la función displayJoke cuando se carga la página
+document.addEventListener("DOMContentLoaded", () => {
+  displayJoke();
+});
+
+// Llamar a la función displayJoke cuando se hace clic en un botón
+const buttonForJoker = document.getElementById("buttonForJoker");
+buttonForJoker.addEventListener("click", displayJoke);
 import { addEventListeners } from '../codeJs/cart/carts.js';
 addEventListeners();
 import { showJoke } from '../codeJs/callRandom.js';
@@ -70,3 +80,4 @@ blackButton.addEventListener('click', () => {
   const newImage = currentImage.replace('-white', '-black');
   imageObserver.update(newImage);
 });
+
