@@ -287,5 +287,32 @@ body {
 }
 
 .modal-content img{
-  width: 6%;
+  width: 40%;
+} 
+
+.modal{
+  z-index: 9999;
+  background-color: white;
+  position: fixed;
+  margin-left: 42%;
+  padding: 7% 44% 53% 1%;
+  border: none;
+  margin-top: -5%;
+  
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.buttonCart{
+  background-color: #0bb9b9;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 4% 6% 2% 5%;
+  border-radius: 7px;
+  margin-top: 3%;
+  margin-bottom: 7%;
+
 }
