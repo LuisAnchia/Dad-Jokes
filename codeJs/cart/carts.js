@@ -28,7 +28,7 @@ export function addEventListeners() {
                  : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-pillow-white') ? 'Product pillow white' 
                  : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-pillow-black') ? 'Product pillow black' 
                  : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-poster-white') ? 'Product poster white' 
-                 : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-poster-black') ? 'Product poster black' : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-poster-black') ? 'Product poster black' :  this.getAttribute('data-producto');
+                 : imagenPrincipal && imagenPrincipal.getAttribute('src').includes('product-poster-black') ? 'Product poster black' :  this.getAttribute('data-producto');
       let producto = new Producto(nombre, imagen, precio);
       carrito.push(producto);
       alert('Product "' + producto.nombre + '" Added the Cart.');
